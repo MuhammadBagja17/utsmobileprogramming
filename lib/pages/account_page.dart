@@ -217,7 +217,7 @@ class AccountPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         height: 60,
         width: double.infinity,
         decoration: BoxDecoration(color: Colors.white, boxShadow: [
@@ -228,19 +228,22 @@ class AccountPage extends StatelessWidget {
               offset: const Offset(0, 1))
         ]),
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 70),
+          margin: const EdgeInsets.symmetric(horizontal: 70),
           child: Row(children: [
             IconButton(
                 onPressed: () {
                   Navigator.popAndPushNamed(context, '/Menu-page');
                 },
-                icon: Icon(Icons.home)),
-            Spacer(),
+                icon: const Icon(Icons.home)),
+            const Spacer(),
             IconButton(
                 onPressed: () {
                   Navigator.popAndPushNamed(context, '/Account-page');
                 },
-                icon: Icon(Icons.person)),
+                icon: const Icon(
+                  Icons.person,
+                  color: Color(0xffBB8FC2),
+                )),
           ]),
         ),
       ),
